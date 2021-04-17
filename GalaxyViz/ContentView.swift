@@ -8,14 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var text: String = "..."
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            Text(text)
+                .padding()
+            Button(action: {
+                text += "pressed "
+            }, label: {
+                Text("button")
+            })
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().previewLayout(.fixed(width: 1200, height: 900))
     }
 }
