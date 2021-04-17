@@ -10,14 +10,8 @@ import SwiftUI
 struct ContentView: View {
     @State var text: String = "..."
     var body: some View {
-        VStack {
-            Text(text)
-                .padding()
-            Button(action: {
-                text += "pressed "
-            }, label: {
-                Text("button")
-            })
+        HStack{
+            SimulationMetalView()
         }
     }
 }

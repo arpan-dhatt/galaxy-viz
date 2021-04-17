@@ -11,6 +11,9 @@
 		78DA981E262B47C600B8C9A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DA981D262B47C600B8C9A8 /* ContentView.swift */; };
 		78DA9820262B47C700B8C9A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78DA981F262B47C700B8C9A8 /* Assets.xcassets */; };
 		78DA9823262B47C700B8C9A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78DA9822262B47C700B8C9A8 /* Preview Assets.xcassets */; };
+		78DA982C262B4E2400B8C9A8 /* SimulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DA982B262B4E2400B8C9A8 /* SimulationView.swift */; };
+		78DA982E262B4E4B00B8C9A8 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 78DA982D262B4E4B00B8C9A8 /* Shaders.metal */; };
+		78DA9830262B4EA100B8C9A8 /* SimulationMetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DA982F262B4EA100B8C9A8 /* SimulationMetalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		78DA9822262B47C700B8C9A8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		78DA9824262B47C700B8C9A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78DA982A262B489700B8C9A8 /* GalaxyViz.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GalaxyViz.entitlements; sourceTree = "<group>"; };
+		78DA982B262B4E2400B8C9A8 /* SimulationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationView.swift; sourceTree = "<group>"; };
+		78DA982D262B4E4B00B8C9A8 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		78DA982F262B4EA100B8C9A8 /* SimulationMetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationMetalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,9 @@
 				78DA981F262B47C700B8C9A8 /* Assets.xcassets */,
 				78DA9824262B47C700B8C9A8 /* Info.plist */,
 				78DA9821262B47C700B8C9A8 /* Preview Content */,
+				78DA982B262B4E2400B8C9A8 /* SimulationView.swift */,
+				78DA982D262B4E4B00B8C9A8 /* Shaders.metal */,
+				78DA982F262B4EA100B8C9A8 /* SimulationMetalView.swift */,
 			);
 			path = GalaxyViz;
 			sourceTree = "<group>";
@@ -140,7 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78DA982E262B4E4B00B8C9A8 /* Shaders.metal in Sources */,
 				78DA981E262B47C600B8C9A8 /* ContentView.swift in Sources */,
+				78DA982C262B4E2400B8C9A8 /* SimulationView.swift in Sources */,
+				78DA9830262B4EA100B8C9A8 /* SimulationMetalView.swift in Sources */,
 				78DA981C262B47C600B8C9A8 /* GalaxyVizApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
