@@ -214,7 +214,7 @@ extension SimulationMetalView : UIViewRepresentable {
     }
     
     func updateUIView(_ nsView: MTKView, context: Context) {
-
+        
     }
 }
 #endif

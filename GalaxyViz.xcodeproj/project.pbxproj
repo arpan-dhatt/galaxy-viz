@@ -14,6 +14,10 @@
 		78DA982C262B4E2400B8C9A8 /* SimulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DA982B262B4E2400B8C9A8 /* SimulationView.swift */; };
 		78DA982E262B4E4B00B8C9A8 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 78DA982D262B4E4B00B8C9A8 /* Shaders.metal */; };
 		78DA9830262B4EA100B8C9A8 /* SimulationMetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DA982F262B4EA100B8C9A8 /* SimulationMetalView.swift */; };
+		78DA9834262BD95400B8C9A8 /* SimulationSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DA9833262BD95400B8C9A8 /* SimulationSelector.swift */; };
+		78DA9836262BD99300B8C9A8 /* SimulationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DA9835262BD99300B8C9A8 /* SimulationCard.swift */; };
+		78DA9838262BDBB000B8C9A8 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DA9837262BDBB000B8C9A8 /* ViewModel.swift */; };
+		78DA983A262BDBE300B8C9A8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DA9839262BDBE300B8C9A8 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,10 @@
 		78DA982B262B4E2400B8C9A8 /* SimulationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationView.swift; sourceTree = "<group>"; };
 		78DA982D262B4E4B00B8C9A8 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		78DA982F262B4EA100B8C9A8 /* SimulationMetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationMetalView.swift; sourceTree = "<group>"; };
+		78DA9833262BD95400B8C9A8 /* SimulationSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationSelector.swift; sourceTree = "<group>"; };
+		78DA9835262BD99300B8C9A8 /* SimulationCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationCard.swift; sourceTree = "<group>"; };
+		78DA9837262BDBB000B8C9A8 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		78DA9839262BDBE300B8C9A8 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +76,10 @@
 				78DA982B262B4E2400B8C9A8 /* SimulationView.swift */,
 				78DA982D262B4E4B00B8C9A8 /* Shaders.metal */,
 				78DA982F262B4EA100B8C9A8 /* SimulationMetalView.swift */,
+				78DA9833262BD95400B8C9A8 /* SimulationSelector.swift */,
+				78DA9835262BD99300B8C9A8 /* SimulationCard.swift */,
+				78DA9837262BDBB000B8C9A8 /* ViewModel.swift */,
+				78DA9839262BDBE300B8C9A8 /* Model.swift */,
 			);
 			path = GalaxyViz;
 			sourceTree = "<group>";
@@ -149,10 +161,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78DA983A262BDBE300B8C9A8 /* Model.swift in Sources */,
 				78DA982E262B4E4B00B8C9A8 /* Shaders.metal in Sources */,
+				78DA9834262BD95400B8C9A8 /* SimulationSelector.swift in Sources */,
 				78DA981E262B47C600B8C9A8 /* ContentView.swift in Sources */,
 				78DA982C262B4E2400B8C9A8 /* SimulationView.swift in Sources */,
+				78DA9836262BD99300B8C9A8 /* SimulationCard.swift in Sources */,
 				78DA9830262B4EA100B8C9A8 /* SimulationMetalView.swift in Sources */,
+				78DA9838262BDBB000B8C9A8 /* ViewModel.swift in Sources */,
 				78DA981C262B47C600B8C9A8 /* GalaxyVizApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

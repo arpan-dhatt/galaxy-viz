@@ -37,7 +37,7 @@ struct AccOut {
 AccOut acceleration(device Particle *particles, uint id, int particleCount, SimulationConstants simConsts) {
     Particle particle1 = particles[id];
     float3 total_acc = float3(0);
-//    float totalMag = 0;
+    float totalMag = 0;
     for (uint i = 0; i < uint(particleCount); i++) {
         Particle particle2 = particles[i];
         float3 acc = particle2.position - particle1.position;
@@ -46,10 +46,10 @@ AccOut acceleration(device Particle *particles, uint id, int particleCount, Simu
         float inv_r3 = pow(magSquared + simConsts.softening_factor*simConsts.softening_factor, 1.5);
         acc /= inv_r3;
         acc *= particle2.mass+0.001;
-//        totalMag += sqrt(magSquared);
+        totalMag += sqrt(magSquared);
         total_acc += acc;
     }
-    return {total_acc*simConsts.gravitational_constant, 0};
+    return {total_acc*simConsts.gravitational_constant, totalMag};
 }
 
 float3 rotateZ(float3 point, float angle) {
@@ -66,6 +66,17 @@ float3 rotateX(float3 point, float angle) {
     return {x, y*cos(angle) - z*sin(angle), y*sin(angle) + z*cos(angle)};
 }
 
+half4 calculateColor(float accMag) {
+    half r = half(min(float(1), float(accMag/5000000)));
+    half g = half(min(float(1), float(accMag/5000000)));
+    half b = half(min(float(1), float(accMag/5000000)));
+    return half4(r, g, b, 1);
+}
+
+void drawCircle(texture2d<half, access::read_write> tex, half4 color) {
+    
+}
+
 kernel void draw_dots_func(device Particle *particles [[ buffer(0) ]],
                            constant int &particleCount [[ buffer(1) ]],
                            constant SimulationConstants &simulationConstants [[ buffer(2) ]],
@@ -79,7 +90,7 @@ kernel void draw_dots_func(device Particle *particles [[ buffer(0) ]],
     float3 velocity = particle.velocity;
     AccOut accOut = acceleration(particles, id, particleCount, simulationConstants);
     float3 acc = accOut.acc;
-//    float totalMag = accOut.accMag;
+    float totalMag = accOut.accMag;
     velocity += acc*simulationConstants.dt;
     position += velocity*simulationConstants.dt;
     
@@ -94,8 +105,7 @@ kernel void draw_dots_func(device Particle *particles [[ buffer(0) ]],
     outPos = rotateX(outPos, simulationConstants.angleX);
     outPos *= simulationConstants.scale;
     uint2 texturePosition = uint2(outPos.x+tex.get_width()/2, outPos.y+tex.get_height()/2);
-//    half velMag = velocity.x*velocity.x + velocity.y*velocity.y + velocity.z*velocity.z;
-    half4 col = half4(1, 1, 1, 1);
+    half4 col = calculateColor(totalMag);
     tex.write(tex.read(texturePosition)+col, texturePosition);
 //    tex.write(tex.read(texturePosition + uint2(1,0))+col, texturePosition + uint2(1,0));
 //    tex.write(tex.read(texturePosition + uint2(0,1))+col, texturePosition + uint2(0,1));

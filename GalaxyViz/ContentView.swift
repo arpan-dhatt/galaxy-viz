@@ -10,14 +10,21 @@ import SwiftUI
 struct ContentView: View {
     @State var text: String = "..."
     var body: some View {
-        HStack{
+        ZStack {
             SimulationMetalView()
+            HStack {
+                VStack {
+                    Text("Available Simulations").font(.title)
+                    SimulationSelector()
+                }
+                Spacer()
+            }.padding()
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().previewLayout(.fixed(width: 1200, height: 900))
+        ContentView().environmentObject(ViewModel()).previewLayout(.fixed(width: 1200, height: 900))
     }
 }
