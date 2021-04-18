@@ -12,7 +12,6 @@
 		78DA9820262B47C700B8C9A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78DA981F262B47C700B8C9A8 /* Assets.xcassets */; };
 		78DA9823262B47C700B8C9A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78DA9822262B47C700B8C9A8 /* Preview Assets.xcassets */; };
 		78DA982C262B4E2400B8C9A8 /* SimulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DA982B262B4E2400B8C9A8 /* SimulationView.swift */; };
-		78DA982E262B4E4B00B8C9A8 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 78DA982D262B4E4B00B8C9A8 /* Shaders.metal */; };
 		78DA9830262B4EA100B8C9A8 /* SimulationMetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DA982F262B4EA100B8C9A8 /* SimulationMetalView.swift */; };
 		78DA9834262BD95400B8C9A8 /* SimulationSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DA9833262BD95400B8C9A8 /* SimulationSelector.swift */; };
 		78DA9836262BD99300B8C9A8 /* SimulationCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DA9835262BD99300B8C9A8 /* SimulationCard.swift */; };
@@ -162,7 +161,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				78DA983A262BDBE300B8C9A8 /* Model.swift in Sources */,
-				78DA982E262B4E4B00B8C9A8 /* Shaders.metal in Sources */,
 				78DA9834262BD95400B8C9A8 /* SimulationSelector.swift in Sources */,
 				78DA981E262B47C600B8C9A8 /* ContentView.swift in Sources */,
 				78DA982C262B4E2400B8C9A8 /* SimulationView.swift in Sources */,
